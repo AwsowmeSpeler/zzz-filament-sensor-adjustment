@@ -493,7 +493,7 @@ bool PAT9125_sensor::updatePAT9125() {
             init(); // try to reinit.
         }
 
-        bool present = (pat9125_s < 17) || (pat9125_s >= 17 && pat9125_b >= 50);
+        bool present = (pat9125_s < 17) || (pat9125_s >= 17 && pat9125_b >= 65); //default Value for b was 50
         if (present != filterFilPresent) {
             filter++;
         } else if (filter) {

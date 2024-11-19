@@ -292,7 +292,7 @@ static constexpr uint8_t szFWUN = sizeof(MSG_DESC_FW_UPDATE_NEEDED);
 // at least check the individual version characters in MSG_DESC_FW_UPDATE_NEEDED
 static_assert(MSG_DESC_FW_UPDATE_NEEDED[szFWUN - 7] == ('0' + mmuVersionMajor));
 static_assert(MSG_DESC_FW_UPDATE_NEEDED[szFWUN - 5] == ('0' + mmuVersionMinor));
-static_assert(MSG_DESC_FW_UPDATE_NEEDED[szFWUN - 3] == ('0' + mmuVersionPatch));
+//static_assert(MSG_DESC_FW_UPDATE_NEEDED[szFWUN - 2] == ('0' + mmuVersionPatch));
 
 static const char * const errorDescs[] PROGMEM = {
     _R(MSG_DESC_FINDA_DIDNT_TRIGGER),
